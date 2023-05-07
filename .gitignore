@@ -1,0 +1,8 @@
+*.jpg
+*.jpeg
+*.webjpg
+*.png
+*.jpg!d
+*.gif
+*.jpe
+notebooks/vqd_cache/

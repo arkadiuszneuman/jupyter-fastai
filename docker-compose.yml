@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    network_mode: host
+    ipc: host
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    deploy:
+      resources:
+        limits:
+          cpus: "20" # Number of CPUs
+          memory: 32GB # Amount of memory (e.g., 4GB)
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
