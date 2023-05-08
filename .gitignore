@@ -6,3 +6,5 @@
 *.gif
 *.jpe
 notebooks/vqd_cache/
+notebooks/car_types/
+notebooks/.ipynb_checkpoints/
